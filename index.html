@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>计算器</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 30px;
+    }
+    input {
+      margin: 5px;
+      padding: 5px;
+    }
+    button {
+      padding: 8px 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>计算小工具</h2>
+
+  <input id="a" placeholder="输入A"><br>
+  <input id="b" placeholder="输入B"><br>
+  <input id="c" placeholder="输入C"><br><br>
+
+  <button onclick="calc()">计算</button>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function calc() {
+      const a = Number(document.getElementById('a').value)
+      const b = Number(document.getElementById('b').value)
+      const c = Number(document.getElementById('c').value)
+
+      // ⭐ 你的公式写这里
+      const result = a * b + c
+
+      document.getElementById('result').innerText = "结果：" + result
+    }
+  </script>
+
+</body>
+</html>
